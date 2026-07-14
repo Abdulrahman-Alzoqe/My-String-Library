@@ -32,8 +32,8 @@ The library is divided into logical utility categories:
 ---
 ### 🛠️ Performance & Implementation Details
 
-. Dual Design: Every function has a static version (accepting a string parameter) and a non-static version (operating on the internal instance variable _Value), giving maximum flexibility.
+* Dual Design: Every function has a static version (accepting a string parameter) and a non-static version (operating on the internal instance variable _Value), giving maximum flexibility.
 
-. Encapsulation: Pure OOP design with protected properties. Supports MSVC __declspec(property) for clean getter/setter syntax.
+* Encapsulation: Pure OOP design with protected properties. Supports MSVC __declspec(property) for clean getter/setter syntax.
 
-. Header-Only: Easy to integrate; just include "ClsString.h" into your project.
+* Header-Only: Easy to integrate; just include "ClsString.h" into your project.
