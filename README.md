@@ -30,38 +30,10 @@ The library is divided into logical utility categories:
 * Replace words or substrings dynamically.
 
 ---
+### 🛠️ Performance & Implementation Details
 
-## 🚀 Usage Examples
+. Dual Design: Every function has a static version (accepting a string parameter) and a non-static version (operating on the internal instance variable _Value), giving maximum flexibility.
 
-The class supports both **Static** (stateless) and **Object-Oriented** (stateful) approaches.
+. Encapsulation: Pure OOP design with protected properties. Supports MSVC __declspec(property) for clean getter/setter syntax.
 
-```cpp
-#include <iostream>
-#include "ClsString.h"
-
-using namespace std;
-
-int main() {
-    // --- 1. Object-Oriented Approach ---
-    ClsString str("   hello custom string library!   ");
-
-    // Using Properties (Get / Set)
-    cout << "Original: " << str.Value << endl;
-
-    // Trimming and Capitalizing
-    str.Value = str.Trim();
-    cout << "Trimmed: " << str.Value << endl;
-    cout << "Capitalized: " << str.MakeFirstLetterCaptalOfString() << endl;
-
-    // --- 2. Static Method Approach ---
-    string text = "C++#//#OOP#//#Library";
-    vector<string> words = ClsString::SplitString(text, "#//#");
-
-    cout << "\nSplit words using static method:" << endl;
-    for (const string& word : words) {
-        
-        cout << "- " << word << endl;
-    }
-
-    return 0;
-}
+. Header-Only: Easy to integrate; just include "ClsString.h" into your project.
